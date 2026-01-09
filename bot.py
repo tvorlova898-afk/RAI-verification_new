@@ -60,7 +60,7 @@ async def auto_approve(chat_join: ChatJoinRequest):
                 if status.strip() == "registered":
                     await chat_join.approve()
                     try:
-                        await bot.send_message(user_id, "<b>Ваша заявка одобрена!</b> 🎉\nДобро пожаловать в RAI.", parse_mode="HTML")
+                        await bot.send_message(user_id, "<b>Ваша заявка одобрена!</b> 🎉\nhttps://t.me/+xYnG7J62U-Y3OGZi.", parse_mode="HTML")
                     except: pass
         except Exception as e:
             logger.error(f"Ошибка одобрения: {e}")
@@ -141,7 +141,7 @@ async def handle_anketa(message: Message):
         async with aiohttp.ClientSession() as session:
             try:
                 await session.post(APPS_SCRIPT_URL, json=user_data[user_id], timeout=15)
-                await message.answer("✅ Сохранено! Подайте заявку:\nhttps://t.me/RAI_service_group")
+                await message.answer("✅ Сохранено! Подайте заявку:\nhttps://t.me/+xYnG7J62U-Y3OGZi")
             except:
                 await message.answer("❌ Ошибка связи, но заявку подать можно.")
         user_data.pop(user_id, None)
