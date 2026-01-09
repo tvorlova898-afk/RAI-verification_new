@@ -72,7 +72,7 @@ async def start(message: Message):
                         "✅ <b>Вы уже проходили верификацию!</b>\n\n"
                         "Все материалы и доступ в группу вам уже открыты. "
                         "Если вы потеряли ссылку на группу, вот она:\n"
-                        "https://t.me/RAI_service_group", 
+                        "https://t.me/+xYnG7J62U-Y3OGZi", 
                         parse_mode="HTML"
                     )
                     return 
@@ -172,7 +172,7 @@ async def handle_message(message: Message):
             except Exception as e:
                 logger.error(f"Ошибка таблицы: {e}")
 
-        await message.answer(f"Теперь перейдите по ссылке:\n\nhttps://t.me/RAI_service_group")
+        await message.answer(f"Теперь перейдите по ссылке:\n\nhttps://t.me/+xYnG7J62U-Y3OGZi")
         user_data.pop(user_id, None)
 
 # ========================================================
